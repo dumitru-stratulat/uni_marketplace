@@ -1,0 +1,175 @@
+/* Remove margin from the page */
+
+* {
+    margin: 0;
+}
+
+/* Container holding top navigation, basket, logo, search, login */
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: auto 20% auto auto 10% 10%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Calibri, sans-serif;
+  }
+  
+  .logo {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  
+  .empty {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  
+  .loginRegister {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    padding-top: 10px;
+  }
+
+  #loginPopup {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    height: 220px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    border-style: hidden;
+    box-shadow: 10px 10px 50px grey;
+    text-align: center;
+    display: none;
+  }
+
+  #regPopup {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    height: 260px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    border-style: hidden;
+    box-shadow: 10px 10px 50px grey;
+    text-align: center;
+    display: none;
+  }
+
+  .basket {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .navBar {
+    grid-column-start: 2;
+    grid-column-end: 5;
+  }
+  
+  .search {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    text-align: left;
+    padding-left: 8px;
+    padding-top: 14px;
+  }
+
+  .logReg {
+    padding-top: 0px;
+    color: black;
+    text-align: right;
+  }
+
+  ul {
+    padding-top: 14px;
+    text-align: center;
+    list-style-type: none;
+  }
+  
+  li {
+    display: inline;
+  }
+  
+  li a {
+    display: inline-block;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    color: #c00;
+  }
+  
+  li a:hover {
+    text-decoration: underline;
+    
+  }
+
+  #productsContainer {
+    margin: auto;
+    height: 400px;
+    width: 600px;
+    grid-gap: 20px;
+    grid-template-columns: auto auto auto;
+    display: none;
+    padding: 5px;
+  }
+  
+  .gridItem {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    font-size: 30px;
+    text-align: center;
+  }
+  /* using flex to align products */
+.container{
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+  justify-content: center;
+  margin:0 auto;
+}
+.card{
+  width: 25%;
+  height: 20vw;
+  margin: 10px;
+  box-sizing: border-box;
+
+}
+.card > p{
+  font-size: 12px;
+  margin-top: 1px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+a{
+  text-decoration: none
+}
+/* setting height vw for big displays */
+.card-image{
+  background: url("../images/no_image.png");
+  width: 85%;
+  height: 15vw;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+
+
