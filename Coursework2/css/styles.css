@@ -13,7 +13,25 @@
     font-weight: bold;
     font-family: Calibri, sans-serif;
   }
-  
+
+/* Homepage background and slogan styling */
+
+  #homeSlogan {
+    background-image: url("../images/mainBackground.jpg");
+    background-size: 1280px 500px;
+    height: 450px;
+    text-align: center;
+    font-family: calibri, sans-serif;
+    font-size: 60px;
+    text-shadow: 3px 3px 4px grey;
+  }
+
+  #slogan {
+    padding-top: 150px;
+  }
+
+/* Scaling parameters for each section in top navigation container */
+
   .logo {
     grid-row-start: 1;
     grid-row-end: 3;
@@ -29,6 +47,26 @@
     grid-column-end: 6;
     padding-top: 10px;
   }
+
+  .basket {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .navBar {
+    grid-column-start: 2;
+    grid-column-end: 5;
+  }
+  
+  .search {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    text-align: left;
+    padding-left: 8px;
+    padding-top: 14px;
+  }
+
+/* Pop up banner as an alternative to additional login sub-page */
 
   #loginPopup {
     left: 0;
@@ -50,6 +88,8 @@
     display: none;
   }
 
+/* Pop up banner as an alternative to additional registration sub-page */ 
+
   #regPopup {
     left: 0;
     right: 0;
@@ -70,23 +110,7 @@
     display: none;
   }
 
-  .basket {
-    text-align: center;
-    padding-top: 10px;
-  }
-
-  .navBar {
-    grid-column-start: 2;
-    grid-column-end: 5;
-  }
-  
-  .search {
-    grid-column-start: 5;
-    grid-column-end: 7;
-    text-align: left;
-    padding-left: 8px;
-    padding-top: 14px;
-  }
+/* Some minor elements in navigation and links styling */
 
   .logReg {
     padding-top: 0px;
@@ -118,27 +142,12 @@
     
   }
 
-  #productsContainer {
-    margin: auto;
-    height: 400px;
-    width: 600px;
-    grid-gap: 20px;
-    grid-template-columns: auto auto auto;
-    display: none;
-    padding: 5px;
-  }
-  
-  .gridItem {
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 50px;
-    font-size: 30px;
-    text-align: center;
-  }
-  /* using flex to align products */
-.container{
+/* using flex to align products */
+
+#container{
   width: 80%;
   height: auto;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-around;
   flex-flow: wrap;
@@ -162,7 +171,9 @@
 a{
   text-decoration: none
 }
+
 /* setting height vw for big displays */
+
 .card-image{
   background: url("../images/no_image.png");
   width: 85%;
@@ -171,5 +182,58 @@ a{
   margin: 0 auto;
 }
 
+/* Footer styling and positioning */
+
+#footer {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 50px;
+  padding: 10px;
+  padding-left: 10px;
+  background-color: grey;
+  color: white;
+  font-family: Calibri, sans-serif;
+  text-align: left;
+}
+
+/* CMS banner pop-up and CMS styling */
+
+#CMS {
+  padding-right: 10px;
+}
+
+#CMS:hover {
+  text-decoration: underline;
+}
+
+#cmsPopup {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  height: 220px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  border-style: hidden;
+  box-shadow: 10px 10px 50px grey;
+  text-align: center;
+  display: none;
+}
 
 
+
+table, th, td {
+  margin-left: auto;
+  margin-right: auto;
+  border:1px solid black;
+}
+
+td {
+  padding: 5px;
+}
