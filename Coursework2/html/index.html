@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../script/script.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalon</title>
+</head>
+<body>
+    
+ <!-- Top cotainer holding logo, login/register links, basket, navbar, and search -->
+    
+    <div class="gridContainer">
+        <div class="logo">
+            <a href="javascript:showSlogan();"><img src="../images/Logo.svg"/></a>
+        </div>
+        <div class="empty"></div>
+        <div class="loginRegister">
+            <ul class="logReg">
+                <li><a href="javascript:openLogin();" style="color:black; padding-left: 5px; padding-right: 0px;">Login</a></li>
+                <li><a href="javascript:openReg();" style="color:black; padding-left: 5px; padding-right: 0px;">Register</a></li>
+            </ul>
+        </div>  
+        <div class="basket">
+            <img src="../images/basket.svg"/>
+        </div>
+
+<!-- Navbar structure with JavaScript function to display products if likns clicked -->
+
+        <div class="navBar">
+            <ul>
+                <li><a href="javascript:openProducts();">Category1</a></li>
+                <li><a href="javascript:openProducts();">Category2</a></li>
+                <li><a href="javascript:openProducts();">Category3</a></li>
+                <li><a href="javascript:openProducts();">Category4</a></li>
+                <li><a href="javascript:openProducts();">Category5</a></li>
+                <li><a href="javascript:openProducts();">Category6</a></li>
+              </ul>
+        </div>
+        <div class="search">
+            <form id="form"> 
+                <input type="search" placeholder="Search..." style="width: 150px;">
+                <button>Search</button>
+              </form>
+        </div> 
+      </div>
+
+<!-- Login and registration positioning and functionality -->
+
+      <div id="loginPopup">
+          <p style="font-family: Calibri, sans-serif; padding: 30px; color: #c00;">Enter Login details below</p>
+          <input style="margin-bottom: 20px;" type="email" placeholder="email...">
+          <input type="password" placeholder="password..."></br>
+          <button onclick="closeLogin();" style="margin-top: 25px; margin-left: 120px;">Login</button>
+      </div>
+      
+      <div id="regPopup">
+        <p style="font-family: Calibri, sans-serif; padding: 30px; color: #c00;">Enter details to register</p>
+        <input style="margin-bottom: 20px;" type="email" placeholder="email...">
+        <input style="margin-bottom: 20px;" type="text" placeholder="username...">
+        <input type="password" placeholder="password..."></br>
+        <button onclick="closeReg();" style="margin-top: 25px; margin-left: 108px;">Register</button>
+    </div>
+
+      <hr style="width:98%; margin-left: 1%; margin-right: 1%; margin-bottom: 50px;">
+
+<!-- Slogan on the main page styling and positioning -->
+
+    <div id="homeSlogan" >
+        <p id="slogan"><span style="color: #c00; padding-right: 400px; text-shadow: black;">Avalon...</span><span style="font-size: 40px;"></span></p>
+        <p style="font-size: 30px; padding-left: 380px;">...spending never ends.</p>
+    </div>
+
+<!-- Products grid for each category link -->
+
+      <section id="container">
+        <div class="card">
+            <div class="card-image">
+            </div>
+            <p><a href="#"> 2021 Apple MacBook Pro (16-inch, Apple M1 Pro chip with 10‑core CPU and 16‑core GPU, 16GB
+                    RAM, 1TB SSD) - Space Grey</a></p>
+            <p>1500£</p>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+            </div>
+            <p><a href="#"> 2021 Apple MacBook Pro (16-inch, Apple M1 Pro chip with 10‑core CPU and 16‑core GPU, 16GB
+                    RAM, 1TB SSD) - Space Grey</a></p>
+            <p>1500£</p>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+            </div>
+            <p><a href="#"> 2021 Apple MacBook Pro (16-inch, Apple M1 Pro chip with 10‑core CPU and 16‑core GPU, 16GB
+                    RAM, 1TB SSD) - Space Grey</a></p>
+            <p>1500£</p>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+            </div>
+            <p><a href="#"> 2021 Apple MacBook Pro (16-inch, Apple M1 Pro chip with 10‑core CPU and 16‑core GPU, 16GB
+                    RAM, 1TB SSD) - Space Grey</a></p>
+            <p>1500£</p>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+            </div>
+            <p><a href="#"> 2021 Apple MacBook Pro (16-inch, Apple M1 Pro chip with 10‑core CPU and 16‑core GPU, 16GB
+                    RAM, 1TB SSD) - Space Grey</a></p>
+            <p>1500£</p>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+            </div>
+            <p><a href="#"> 2021 Apple MacBook Pro (16-inch, Apple M1 Pro chip with 10‑core CPU and 16‑core GPU, 16GB
+                    RAM, 1TB SSD) - Space Grey</a></p>
+            <p>1500£</p>
+        </div>
+    </section>
+
+<!-- CMS login pop-up baner design and display function -->
+
+    <div id="cmsPopup">
+        <p style="font-family: Calibri, sans-serif; padding: 30px; color: #c00;">CMS staff login details</p>
+        <input style="margin-bottom: 20px;" type="text" placeholder="staff id number...">
+        <input type="password" placeholder="password..."></br>
+        <button onclick="goToCms();" style="margin-top: 25px; margin-left: 120px;">Login</button>
+    </div>
+
+<!-- Footer design and content -->
+
+    <footer id="footer">
+        <div >
+            <p>Authors: Adesh, Dumitru, Pawel<br>
+            <a href="ADP@example.com">ADP@example.com</a></p>
+        </div>
+        <div style="text-align: right;">
+            <a id="CMS" style="color: white;" href="javascript:cmsLogin();">CMS login</a>
+        </div>
+    </footer>
+</body>
+</html>
