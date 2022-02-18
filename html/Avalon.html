@@ -9,7 +9,8 @@
     <title>Avalon</title>
 </head>
 
-<body>
+<body onload="getProducts();">
+     <!-- Top cotainer holding logo, login/register links, basket, navbar, and search -->
     <div class="gridContainer">
         <div class="logo">
             <img src="../images/Logo.svg" />
@@ -28,6 +29,7 @@
         <div class="basket">
             <img src="../images/basket.svg" />
         </div>
+        <!-- Navbar structure with JavaScript function to display products if likns clicked -->
         <div class="navBar">
             <ul>
                 <li>
@@ -60,16 +62,14 @@
                         Smartphones
                     </a>
                 </li>
+                <div>
+                    <input class="searchInput" type="text">
+                    <button onclick="searchProduct()">Search</button>
+                 </div>
             </ul>
         </div>
-        <div class="search">
-            <!-- <form id="form"> 
-                <input type="search" placeholder="Search..." style="width: 150px;">
-               
-            </form> -->
-        </div>
     </div>
-
+<!-- Login and registration positioning and functionality -->
     <div id="loginPopup">
         <p style="font-family: Calibri, sans-serif; padding: 30px; color: #c00;">Enter Login details below</p>
         <input style="margin-bottom: 20px;" type="email" placeholder="email..." id="loginEmailInput">
@@ -89,12 +89,28 @@
     <hr style="width:100%; margin-bottom: 50px;">
     <button onclick="sortAscedingByPrice();">Ascending:By Price</button>
     <button onclick="sortDescedingByPrice();">Desceding:By Price</button>
-    <button onclick="getProducts();">Get products</button>
-    <script>
-        //   document.getElementById("getProductsButton").addEventListener("click", getProducts);
-    </script>
     <section class="container">
     </section>
+    <!-- CMS login pop-up baner design and display function -->
+
+    <div id="cmsPopup">
+            <p style="font-family: Calibri, sans-serif; padding: 30px; color: #c00;">CMS staff login details</p>
+            <input style="margin-bottom: 20px;" type="text" placeholder="staff id number...">
+            <input type="password" placeholder="password..."></br>
+            <button onclick="goToCms();" style="margin-top: 25px; margin-left: 120px;">Login</button>
+        </div>
+    
+    <!-- Footer design and content -->
+    
+        <footer id="footer">
+            <div >
+                <p>Authors: Adesh, Dumitru, Pawel<br>
+                <a href="ADP@example.com">ADP@example.com</a></p>
+            </div>
+            <div style="text-align: right;">
+                <a id="CMS" style="color: white;" href="javascript:cmsLogin();">CMS login</a>
+            </div>
+        </footer>
     <script src="../script/script.js"></script>
 </body>
 

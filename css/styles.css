@@ -161,7 +161,6 @@ a {
 }
 /* setting height vw for big displays */
 .card-image {
-	/* background: url("../images/no_image.png"); */
 	width: 85%;
 	height: 15vw;
 	background-size: cover;
@@ -173,4 +172,59 @@ a {
 }
 #loginError{
   font-size: 10px;
+}
+
+
+#footer {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 50px;
+  padding: 10px;
+  padding-left: 10px;
+  background-color: grey;
+  color: white;
+  font-family: Calibri, sans-serif;
+  text-align: left;
+}
+
+/* CMS banner pop-up and CMS styling */
+
+#CMS {
+  padding-right: 10px;
+}
+
+#CMS:hover {
+  text-decoration: underline;
+}
+
+#cmsPopup {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  height: 220px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  border-style: hidden;
+  box-shadow: 10px 10px 50px grey;
+  text-align: center;
+  display: none;
+}
+
+
+
+table, th, td {
+  margin-left: auto;
+  margin-right: auto;
+  border:1px solid black;
+}
+
+td {
+  padding: 5px;
 }

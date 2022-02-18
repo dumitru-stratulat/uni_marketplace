@@ -4,8 +4,10 @@ function openLogin() {
 
 function closeLogin() {
   let xhr = new XMLHttpRequest();
+  //getting email and password
   let email = document.getElementById("loginEmailInput").value;
   let password = document.getElementById("passwordEmailInput").value;
+  //send email and password to back end
   xhr.open('GET', `../php/login.php?email=${email}&password=${password}`, true);
   xhr.onload = function () {
     if (this.status == 200) {
@@ -30,7 +32,6 @@ function openReg() {
 
 function closeReg() {
   let xhr = new XMLHttpRequest();
-
   xhr.open('POST', '../php/register.php', true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.onload = function () {
@@ -42,8 +43,6 @@ function closeReg() {
   let username = document.getElementById("usernameInput").value;
   let password = document.getElementById("passwordInput").value;
   xhr.send("email=" + email + "&username=" + username + "&password=" + password);
-
-
   document.getElementById('regPopup').style.display = 'none';
 }
 
@@ -145,10 +144,13 @@ function getProductsByCategory(id) {
   xhr.send();
 }
 function logout() {
+  //remove session, remove user from localstorage and reload the website
   localStorage.removeItem("user");
   location.reload(true);
 }
 window.onload = onLoad();
+window.onload = getProducts();
+
 //when page Avalon.html load
 function onLoad() {
   document.getElementsByClassName("logReg")[0].innerHTML = '';
@@ -170,3 +172,28 @@ function onLoad() {
   }
 }
 
+function searchProduct(){
+  let searchInput = document.getElementsByClassName("searchInput")[0].value;
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", `../php/search.php?search=${searchInput}`, true);
+  xhr.onload = function () {
+    if (this.status == 200) {
+      let response = JSON.parse(this.responseText);
+      document.getElementsByClassName("container")[0].innerHTML = '';
+      response.forEach((product) => {
+      const cardHtml = `
+                        <div class="card">
+                                <div class="card-image">
+                                  <img class="productImg" src="../images/${product.images[0]}" alt="#">
+                                </div>
+                                <p>
+                                    <a href="#">${product.title}</a></p>
+                                <p>${product.price}£</p>
+                        </div>`;
+        document.getElementsByClassName("container")[0].innerHTML += cardHtml;
+      });
+    }
+  }
+  xhr.send();
+}
